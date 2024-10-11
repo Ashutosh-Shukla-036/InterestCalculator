@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-wrapper">
+        <div class="container">
+            <h2>Simple Interest Calculator</h2>
+            <input type="number" placeholder="Enter principal amount" id="simplePrincipal" min="0"><br>
+            <input type="number" placeholder="Enter rate of interest (%)" id="simpleRate" min="0"><br>
+            <input type="number" placeholder="Enter time span (years)" id="simpleTime" min="0"><br>
+            <button onclick="calculateSimpleInterest()">Calculate</button>
+            <p id="simpleAns"></p>
+            <p id="simpleLoading" style="display: none;">Calculating...</p>
+        </div>
+
+        <div class="container">
+            <h2>Compound Interest Calculator</h2>
+            <input type="number" placeholder="Enter principal amount (P)" id="compoundPrincipal" min="0" required><br>
+            <input type="number" placeholder="Enter annual interest rate (%) (r)" id="compoundRate" min="0" required><br>
+            <input type="number" placeholder="Enter time (in years) (t)" id="compoundTime" min="0" required><br>
+            <input type="number" placeholder="Enter number of times interest applied per year (n)" id="compoundN" min="0" required><br>
+            <button onclick="calculateCompoundInterest()">Calculate</button>
+            <p id="compoundAns"></p>
+            <p id="compoundLoading" style="display: none;">Calculating...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
