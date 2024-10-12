@@ -17,7 +17,7 @@ async function calculateSimpleInterest() {
 
     try {
         loading.style.display = "block";
-        const response = await fetch("http://localhost:3000/SimpleInterest", {
+        const response = await fetch("https://interestcalculator-1.onrender.com/SimpleInterest", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -64,7 +64,7 @@ async function calculateCompoundInterest() {
 
     try {
         loading.style.display = "block";
-        const response = await fetch("http://localhost:3000/CompoundInterest", {
+        const response = await fetch("https://interestcalculator-1.onrender.com/CompoundInterest", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -85,4 +85,8 @@ async function calculateCompoundInterest() {
     } finally {
         loading.style.display = "none";
     }
+    document.getElementById("compoundPrincipal").value = "";
+    document.getElementById("compoundRate").value = "";
+    document.getElementById("compoundTime").value = "";
+    document.getElementById("compoundN").value = "";
 }
